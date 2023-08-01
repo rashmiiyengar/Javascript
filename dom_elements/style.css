@@ -1,0 +1,8 @@
+.my-button {
+  padding: 20px 10px; /* Adjust the values as per your desired spacing */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust the value as per your desired spacing */
+}
