@@ -18,12 +18,19 @@ const getSuperHero = (id, name) => {
   fetch(`${BASE_URL}/${id}`)
     .then((response) => response.json())
     .then((json) => {
-      console.log(json);
+      console.log(json.powerstats);
+      getStats(json)
       const name = `<h2>${json.name}</h2>`
       heroImgDiv.innerHTML = ` ${name} <img src="${json.image.url}" heigth=200 width=200/>`;
     });
 };
 
+const getStats=(charector)=>{
+  Object.keys(charector.powerstats).map(stat => {
+      `<p>${stat}: ${charector.powerstats[stat]} `
+
+  })
+}
 const getSerachSuperHero = (name) => {
 console.log(`${inputValue.value} here` )
   fetch(`${BASE_URL}/search/${name}`)
