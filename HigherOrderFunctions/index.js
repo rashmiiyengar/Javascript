@@ -1,7 +1,7 @@
 const radius = [3,4,7,8];
 
-const area =(radius)=>{
-    return Math.PI * radius *radius ;
+const area =(i)=>{
+    return Math.PI * i *i ;
 }//Callback Functions
 
 const circumference=(radius)=>{
