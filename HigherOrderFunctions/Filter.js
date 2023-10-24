@@ -18,7 +18,7 @@ if(curr.age<20){
 }
 return acc;
 },{})
-console.log(`${names}, reduce for first name less than 20`)
+console.log(`${names}, reduce for first name less than 20`);
 
 function isOdd(x){
 return x%2;

@@ -9,7 +9,7 @@ courseTitle:item.courseTitle,
 price:item.price
 }));
 
-
+console.log(mapobject)
 mapobject.forEach(obj => {
     console.log(obj);
   });
@@ -19,6 +19,18 @@ jsonData.courses.webAutomation.forEach(obj=>{
   
 });
 
+const opt= jsonData.courses.webAutomation.reduce((acc,curr)=>{
+if(acc[curr.price]){
+  acc[curr.price] = acc[curr.price]+1
+  acc[curr.courseTitle] = curr.courseTitle
+  
+}else{
+  acc[curr.price]=1
+  acc[curr.courseTitle] = curr.courseTitle
+}
+return acc
+},{})
+console.log(opt);
   
 // const cypressObject = jsonData.courses.webAutomation.filter(item=>item.courseTitle ==="Cypress");
 

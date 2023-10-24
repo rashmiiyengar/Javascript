@@ -6,6 +6,16 @@ const users= [{firstName:"Rashmi",lastName:"Iyengar",age:28},
 {firstName:"Ridhi",lastName:"Iyengar",age:8},
 ]
 
+const outp=users.reduce((acc,curr)=>{
+if(curr.lastName.startsWith("I")){
+    acc[curr.lastName]= curr.lastName;
+    console.log(acc)
+}
+return acc;
+},{})
+console.log(outp);
+
+
 const output = users.reduce((acc,curr)=>{
 if(acc[curr.age]){
 console.log(acc[curr.age])

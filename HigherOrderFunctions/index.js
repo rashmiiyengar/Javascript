@@ -21,10 +21,10 @@ return output;
 }//Higher Order Functions//map func replication
 
 console.log(calculate(radius,area));
-console.log(calculate(radius,circumference));
-console.log(calculate(radius,diameter));
+// console.log(calculate(radius,circumference));
+// console.log(calculate(radius,diameter));
 
-console.log(radius.map(diameter))
+// console.log(radius.map(diameter))
 
 Array.prototype.calculateMap = (logic)=>{
     const res =[];
@@ -35,4 +35,4 @@ Array.prototype.calculateMap = (logic)=>{
     return res;
     }
 
-    console.log(radius.calculateMap(diameter))
+     console.log(radius.calculateMap(diameter))
